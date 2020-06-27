@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FilterPrimary from '../../components/filter-primary';
 import HeaderPrimary from '../../components/header-primary'
 import NewsCardPrimary from '../../components/news-card-primary';
 import FooterSection from '../../section/footer-section';
@@ -7,7 +6,6 @@ import LoadingPrimary from '../../components/loading-primary';
 import NoDataPrimary from '../../components/no-data-primary';
 import PlayGroundPageStyle from './index.style';
 import { Container, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import axios from '../../axios';
 
 class PlayGroundPage extends Component{

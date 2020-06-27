@@ -5,7 +5,7 @@ class LoadingPrimary extends Component{
     render(){
         return(
             <LoadingPrimaryStyle>
-                <img src="../../image/icon/loading.svg"></img>
+                <img src="../../image/icon/loading.svg" alt="Loading..."></img>
             </LoadingPrimaryStyle>
         )
     }

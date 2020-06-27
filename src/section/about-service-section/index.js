@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AboutServiceSectionStyle from './index.style';
 import LabelPrimary from '../../components/label-primary';
-import {Container, Row, Col} from 'reactstrap';
+import {Container} from 'reactstrap';
 
 class AboutBioSection extends Component {
     constructor(props){

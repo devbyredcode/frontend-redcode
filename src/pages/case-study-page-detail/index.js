@@ -37,7 +37,7 @@ class CaseStudyPageDetail extends Component {
                                     BACK
                                 </Link>
                             </div>
-                            <img src={`https://res.cloudinary.com/devbyredcode/image/upload/${this.state.itemData.image}`} className="img-fluid"/>
+                            <img src={`https://res.cloudinary.com/devbyredcode/image/upload/${this.state.itemData.image}`} className="img-fluid" draggable="false" alt={this.state.itemData.title}/>
                             <div className="case-study-page__title__content">
                                 <span>{this.state.itemData.category}</span>
                                 <h1>{this.state.itemData.title || <Skeleton/>}</h1>

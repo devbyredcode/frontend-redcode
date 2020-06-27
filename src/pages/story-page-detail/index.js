@@ -51,15 +51,15 @@ class StoryPageDetail extends Component{
                             <p><span className="category">{this.state.itemData.category}</span> by {this.state.itemData.author}</p>
                         </div>
                         <div className="container story-page__image">
-                            <img src={`https://res.cloudinary.com/devbyredcode/image/upload/${this.state.itemData.image}`} className="img-fluid"/>
+                            <img src={`https://res.cloudinary.com/devbyredcode/image/upload/${this.state.itemData.image}`} className="img-fluid" alt={this.state.itemData.title}/>
                         </div>
                         <div className="container story-page__description">
                             <p className="" dangerouslySetInnerHTML={{__html: this.state.itemData.detail}}/>
                         </div>
                         <div className="container story-page__share">
                             <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media supaya bisa bermanfaat untuk temen-temen lainya dengan cara klik  
-                                <a className="share-twt" href={`https://twitter.com/intent/tweet?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}, silahkan klik https://www.redcode.id/story/${this.state.itemData.slug}. Semoga bermanfaat`}> Bagikan melalui Twitter</a>
-                                <a className="share-wa" href={`whatsapp://send?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}. Silahkan klik https://www.redcode.id/story/${this.state.itemData.slug}. Semoga bermanfaat`}><span className="black"> atau</span> Bagikan melalui Whatsapp</a> 
+                                <a className="share-twt" href={`https://twitter.com/intent/tweet?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}, silahkan klik ${window.location.origin}/story/${this.state.itemData.slug}. Semoga bermanfaat`}> Bagikan melalui Twitter</a>
+                                <a className="share-wa" href={`whatsapp://send?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}. Silahkan klik ${window.location.origin}/story/${this.state.itemData.slug}. Semoga bermanfaat`}><span className="black"> atau</span> Bagikan melalui Whatsapp</a> 
                             </p>
                         </div>
                     </div>

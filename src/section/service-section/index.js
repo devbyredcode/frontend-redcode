@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ServiceSectionStyle from './index.style';
-import CardServices from '../../components/card-services';
 
 class ServiceSection extends Component{
     state = {

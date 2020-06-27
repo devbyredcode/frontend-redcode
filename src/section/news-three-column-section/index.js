@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import NewsThreeColumnSectionStyle from './index.style';
 import ButtonPrimary from '../../components/button-primary';
 import NewsCardPrimary from '../../components/news-card-primary';
-import LoadingPrimary from '../../components/loading-primary';
 import { Link } from 'react-router-dom';
 
 class NewsThreeColumnSection extends Component{

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome } from 'react-icons/fa';
 
 import BreadcrumbsPrimaryStyle from './index.style';
 
