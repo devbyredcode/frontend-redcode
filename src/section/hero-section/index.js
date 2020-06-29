@@ -7,7 +7,7 @@ import HeroSectionStyle from './index.style';
 class HeroSection extends Component{
     
     animateScrollDown(){
-        alert('EGA');
+        
     }
 
     render(){
