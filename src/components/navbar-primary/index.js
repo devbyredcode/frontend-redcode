@@ -48,7 +48,8 @@ class NavbarPrimary extends Component{
                     <div className="navbar-wrapper-mobile__overlay">
                         <div className="navbar-wrapper-mobile__overlay__item">
                         {dataRoute.map((data, index) => {
-                            return <Link to={data.url} key={index} onClick={this.toggleNavbar}>{data.title}</Link>
+                            return <Link to={data.url} key={index} 
+                                        onClick={this.toggleNavbar}>{data.title}</Link>
                         })}
                         </div>
                     </div>
