@@ -12,7 +12,7 @@ import CaseStudyPageDetail from './pages/case-study-page-detail';
 
 function App() {  
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <NavbarPrimary/>
         <Switch>
