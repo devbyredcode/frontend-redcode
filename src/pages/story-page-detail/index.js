@@ -69,7 +69,7 @@ class StoryPageDetail extends Component{
                             <p className="" dangerouslySetInnerHTML={{__html: this.state.itemData.detail}}/>
                         </div>
                         <div className="container story-page__share">
-                            <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media agar dapat bermanfaat untuk temen-temen lainya dengan cara klik</p>
+                            <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media agar dapat bermanfaat untuk temen-temen lainya:</p>
                             <EmailShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut ${window.location.href} dan semoga bermanfaat`}><EmailIcon size={32}/></EmailShareButton>
                             <TelegramShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><TelegramIcon size={32}/></TelegramShareButton>
                             <WhatsappShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><WhatsappIcon size={32}/></WhatsappShareButton>
