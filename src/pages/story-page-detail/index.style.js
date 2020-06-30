@@ -111,32 +111,8 @@ const StoryPageDetailStyle = styled.div`
             line-height: 1.5em;
             font-family: 'Poppins';
 
-            .share-twt{
-                color: #3498db;
-
-                &:hover{
-                    text-decoration: none;
-                    color: rgba(255,0,69,1);
-                }
-            }
-
-            .share-wa{
-                color: #2ecc71;
-
-                .black{
-                    color: #757575; 
-                }
-
-                display: none;
-
-                @media (max-width: 768px){
-                    display: block;
-                }
-
-                &:hover{
-                    text-decoration: none;
-                    color: rgba(255,0,69,1);
-                }
+            button{
+                margin-right: 10px;
             }
         }
     }

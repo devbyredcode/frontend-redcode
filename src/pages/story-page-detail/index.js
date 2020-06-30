@@ -5,6 +5,18 @@ import LoadingPrimary from '../../components/loading-primary';
 import BreadcrumbsPrimary from '../../components/breadcrumbs-primary';
 import FooterSection from '../../section/footer-section';
 import axios from '../../axios';
+import {
+    EmailShareButton,
+    EmailIcon,
+    WhatsappIcon,
+    WhatsappShareButton,
+    TelegramShareButton,
+    TwitterShareButton,
+    TwitterIcon,
+    TelegramIcon,
+    WorkplaceShareButton,
+    WorkplaceIcon
+} from "react-share";
 
 class StoryPageDetail extends Component{
     constructor(props){
@@ -57,10 +69,12 @@ class StoryPageDetail extends Component{
                             <p className="" dangerouslySetInnerHTML={{__html: this.state.itemData.detail}}/>
                         </div>
                         <div className="container story-page__share">
-                            <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media supaya bisa bermanfaat untuk temen-temen lainya dengan cara klik  
-                                <a className="share-twt" href={`https://twitter.com/intent/tweet?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}, silahkan klik ${window.location.origin}/#/story/${this.state.itemData.slug}. Semoga bermanfaat`}> Bagikan melalui Twitter</a>
-                                <a className="share-wa" href={`whatsapp://send?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}. Silahkan klik ${window.location.origin}/#/story/${this.state.itemData.slug}. Semoga bermanfaat`}><span className="black"> atau</span> Bagikan melalui Whatsapp</a> 
-                            </p>
+                            <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media agar dapat bermanfaat untuk temen-temen lainya dengan cara klik</p>
+                            <EmailShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut ${window.location.href} dan semoga bermanfaat`}><EmailIcon size={32}/></EmailShareButton>
+                            <TelegramShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><TelegramIcon size={32}/></TelegramShareButton>
+                            <WhatsappShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><WhatsappIcon size={32}/></WhatsappShareButton>
+                            <TwitterShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><TwitterIcon size={32}/></TwitterShareButton>
+                            <WorkplaceShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><WorkplaceIcon size={32}/></WorkplaceShareButton>
                         </div>
                     </div>
                 <FooterSection/>
