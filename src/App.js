@@ -12,7 +12,7 @@ import CaseStudyPageDetail from './pages/case-study-page-detail';
 
 function App() {  
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter hashType="slash">
       <div className="App">
         <NavbarPrimary/>
         <Switch>
@@ -25,7 +25,7 @@ function App() {
           <Route path="/about" component={AboutPage}/>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
