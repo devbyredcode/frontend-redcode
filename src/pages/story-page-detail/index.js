@@ -58,8 +58,8 @@ class StoryPageDetail extends Component{
                         </div>
                         <div className="container story-page__share">
                             <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media supaya bisa bermanfaat untuk temen-temen lainya dengan cara klik  
-                                <a className="share-twt" href={`https://twitter.com/intent/tweet?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}, silahkan klik ${window.location.href}. Semoga bermanfaat`}> Bagikan melalui Twitter</a>
-                                <a className="share-wa" href={`whatsapp://send?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}. Silahkan klik ${window.location.href}. Semoga bermanfaat`}><span className="black"> atau</span> Bagikan melalui Whatsapp</a> 
+                                <a className="share-twt" href={`https://twitter.com/intent/tweet?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}, silahkan klik ${window.location.origin}/#/story/${this.state.itemData.slug}. Semoga bermanfaat`}> Bagikan melalui Twitter</a>
+                                <a className="share-wa" href={`whatsapp://send?text=Ayo baca artikel berjudul: ${this.textToCapitalize(this.state.itemData.title)}. Silahkan klik ${window.location.origin}/#/story/${this.state.itemData.slug}. Semoga bermanfaat`}><span className="black"> atau</span> Bagikan melalui Whatsapp</a> 
                             </p>
                         </div>
                     </div>
