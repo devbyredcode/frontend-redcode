@@ -62,7 +62,7 @@ class PlayGroundPage extends Component{
                 </Container>
                 { 
                     this.state.isLoading ? 
-                    <Skeleton width={window.innerWidth > 768 ? 330 : 300} height={400} count={3} style={{margin: "0px 20px 20px"}}/> :
+                    <Skeleton width={window.innerWidth > 768 ? 330 : 300} height={window.innerWidth > 768 ? 400 : 300} count={1} style={{margin: "0px 20px 20px"}}/> :
                     <Container>
                         <Row className="news-wrapper">
                             {

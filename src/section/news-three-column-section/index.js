@@ -38,7 +38,7 @@ class NewsThreeColumnSection extends Component{
                         <Row className="news-wrapper">
                             {
                                 this.state.articleItems.length < 1 ? 
-                                <Skeleton width={window.innerWidth > 768 ? 330 : 300} height={400} count={1} style={{margin: "0px 20px"}}/> :     
+                                <Skeleton width={window.innerWidth > 768 ? 330 : 300} height={window.innerWidth > 768 ? 400 : 300} count={1} style={{margin: "0px 20px"}}/> :     
                                 this.state.articleItems.map((data, index) => {
                                     return <Col key={index} lg="4" md="4" sm="12" xs="12" className="pl-0 pr-0">
                                                 <NewsCardPrimary
