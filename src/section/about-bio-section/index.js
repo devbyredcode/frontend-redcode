@@ -7,8 +7,9 @@ class AboutBioSection extends Component {
         return (
             <AboutBioSectionStyle className="container-fluid">
                 <Container>
-                    <h2 className="text--step-up-1">ABOUT REDCODE</h2>
-                    <p>REDCODE is a team. Since 2018 we start to solve your problem by digitalize your products. We solve your problem with our best practice. We also write some stories and do some experiments. Lets touch us on Email and we will contact you as soon as possible</p>
+                    <img src="/image/icon/profile.jpg" alt="Ega Javier Harwenda Profile" draggable="false"/>
+                    <h2 className="text--step-up-1">ABOUT HARALAB</h2>
+                    <p>Hello, my name is Ega Javier Harwenda. I start my journey as a Web Developer since 2018 at my life as a collegers. I start to speak using PHP on the server-side and Javascript for the client-side. Right now, Im mastering my skills on learn how to implement Javascript for the server-side and mobile apps development</p>
                 </Container>
             </AboutBioSectionStyle>
         )

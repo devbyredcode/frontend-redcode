@@ -9,7 +9,7 @@ class NewsCardPrimary extends Component{
             <NewsCardPrimaryStyle>
                 <div className="card-primary__layer">
                     {
-                    this.props.type == 'url' ?
+                    this.props.type === 'url' ?
                         <a href={this.props.url} target="_blank" rel="noopener noreferer">
                             <ButtonPrimary
                                 label="OPEN IT"

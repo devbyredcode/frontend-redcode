@@ -49,7 +49,7 @@ const ServiceSectionStyle = styled.section`
             }
 
             @media only screen and (max-width: 768px) {
-                justify-content: space-between;
+                justify-content: space-around;
             }
         }
 

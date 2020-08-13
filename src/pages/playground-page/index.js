@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HeaderPrimary from '../../components/header-primary'
 import NewsCardPrimary from '../../components/news-card-primary';
 import FooterSection from '../../section/footer-section';
-import LoadingPrimary from '../../components/loading-primary';
+import Skeleton from 'react-loading-skeleton';
 import NoDataPrimary from '../../components/no-data-primary';
 import PlayGroundPageStyle from './index.style';
 import { Container, Row, Col } from 'reactstrap';
@@ -19,7 +19,7 @@ class PlayGroundPage extends Component{
                 {category : 'web', label: 'WEB APPS'},
                 {category : 'mobile', label: 'MOBILE APPS'}
             ],
-            itemData    : []
+            items         : []
         }
     }
 
@@ -30,8 +30,8 @@ class PlayGroundPage extends Component{
         await axios.get(`/api/v1/playground/category/${param}`)
                 .then(response => {
                     this.setState({
-                        ...this.state, itemData: response.data.data.data_playground, isLoading : false
-                    })
+                        ...this.state, items: response.data.data.data_playground, isLoading : false
+                    });
                 })
     }
 
@@ -39,11 +39,9 @@ class PlayGroundPage extends Component{
         window.scrollTo(0, 0);
         axios.get('/api/v1/playground')
                 .then(response => {
-                    console.log(response);
                     this.setState({
-                        ...this.state, itemData: response.data.data.data_playground, isLoading : false
-                    })
-                    console.log(this.state);
+                        ...this.state, items: response.data.data.data_playground, isLoading : false
+                    });
                 })
     }
 
@@ -56,7 +54,7 @@ class PlayGroundPage extends Component{
                 <Container className="filter-primary-wrapper">
                     <div className="filter-primary-wrapper__item">
                         {this.state.itemFilter.map((item, index) => {
-                            return <span className={this.state.isActive == item.category ? 'active' : ""}  
+                            return <span className={this.state.isActive === item.category ? 'active' : ""}  
                                         onClick={this.getDataWithCategory.bind(this, item.category)} 
                                         key={index}>{item.label}</span>
                         })}
@@ -64,14 +62,14 @@ class PlayGroundPage extends Component{
                 </Container>
                 { 
                     this.state.isLoading ? 
-                    <LoadingPrimary/> :
+                    <Skeleton width={window.innerWidth > 768 ? 330 : 300} height={400} count={3} style={{margin: "0px 20px 20px"}}/> :
                     <Container>
                         <Row className="news-wrapper">
                             {
-                            this.state.itemData.length < 1 ? 
+                            this.state.items.length < 1 ? 
                             <NoDataPrimary
                                 paragraph="Hello, we still making some awesome experiment. Stay tuned."/> :
-                                this.state.itemData.map((data, index) => {
+                                this.state.items.map((data, index) => {
                                     return  <Col lg="4" md="4" sm="12" xs="12" className="news-wrapper__card" key={index}>
                                                 <a href={data.link} target="_blank" rel="noopener noreferer">
                                                     <NewsCardPrimary

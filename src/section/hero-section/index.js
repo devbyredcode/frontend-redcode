@@ -17,7 +17,7 @@ class HeroSection extends Component{
                     <Row className="hero-section">
                         <div className="hero-section__title">
                             <Fade up>
-                                <h1>WE CREATE <span className="red">WEBSITE</span> AND <span className="red">MOBILE</span> <br/>APPS PRODUCTS</h1>
+                                <h1>I CREATE <span className="red">WEBSITE</span> AND <span className="red">MOBILE</span> APPS PRODUCTS</h1>
                                 <p></p>
                             </Fade>
                         </div>
@@ -28,7 +28,7 @@ class HeroSection extends Component{
                                 label="SEE CASE STUDY"/>
                         </div>
                         <div className="hero-section__download">
-                            <a href="mailto:devbyredcode@gmail.com">HIRE US</a><span> / </span><a className="">DOWNLOAD OUR PRESENTATION</a>
+                            <a href="mailto:egaharwenda@gmail.com">HIRE ME</a><span> / </span><a className="">DOWNLOAD MY RESUME</a>
                         </div>
                     </Row>
                 </Container>

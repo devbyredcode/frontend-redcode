@@ -3,8 +3,8 @@ import HeaderPrimary from '../../components/header-primary';
 import NewsCardPrimary from '../../components/news-card-primary';
 import FooterSection from '../../section/footer-section';
 import CaseStudyPageStyle from './index.style';
-import LoadingPrimary from '../../components/loading-primary';
 import NoDataPrimary from '../../components/no-data-primary';
+import Skeleton from 'react-loading-skeleton';
 
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
@@ -60,35 +60,33 @@ class CaseStudyPage extends Component{
                 <Container className="filter-primary-wrapper">
                     <div className="filter-primary-wrapper__item">
                         {this.state.itemFilter.map((item, index) => {
-                            return <span className={this.state.isActive == item.category ? 'active' : ""}  
+                            return <span className={this.state.isActive === item.category ? 'active' : ""}  
                                         onClick={this.getDataWithCategory.bind(this, item.category)} 
                                         key={index}>{item.label}</span>
                         })}
                     </div>
                 </Container>
-                { 
-                    this.state.isLoading ? 
-                    <LoadingPrimary/> :
                     <Container>
                         <Row className="news-wrapper">
-                            {
+                        { 
+                            this.state.isLoading ? 
+                            <Skeleton width={window.innerWidth > 768 ? 500 : 300} height={300} count={4} style={{margin: "0px 20px 40px"}}/> :
                             this.state.itemData.length < 1 ? 
-                            <NoDataPrimary
-                                paragraph="Hello, we still making some awesome apps. Stay tuned."/> :
-                                this.state.itemData.map((data, index) => {
-                                    return  <Col lg="6" md="6" sm="12" xs="12" className="news-wrapper__card" key={index}>
-                                                <Link to={`/case-study/${data.slug}`}>
-                                                    <NewsCardPrimary
-                                                        image={`https://res.cloudinary.com/devbyredcode/image/upload/${data.image}`}
-                                                        title={data.title}
-                                                        url={`case-study/${data.slug}`}/>
-                                                </Link>
-                                            </Col>
-                            })
-                            }
+                                <NoDataPrimary
+                                    paragraph="Hello, we still making some awesome apps. Stay tuned."/> :
+                                    this.state.itemData.map((data, index) => {
+                                        return  <Col lg="6" md="6" sm="12" xs="12" className="news-wrapper__card" key={index}>
+                                                    <Link to={`/case-study/${data.slug}`}>
+                                                        <NewsCardPrimary
+                                                            image={`https://res.cloudinary.com/devbyredcode/image/upload/${data.image}`}
+                                                            title={data.title}
+                                                            url={`case-study/${data.slug}`}/>
+                                                    </Link>
+                                                </Col>
+                                })
+                        }
                         </Row>
                     </Container>
-                }
                 <FooterSection/>
             </CaseStudyPageStyle>
         )

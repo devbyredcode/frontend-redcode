@@ -17,6 +17,10 @@ const SliderSectionStyle = styled.section`
 
         .slider-wrapper{
 
+            &__item{
+                min-height: 500px;
+            }
+
             &__action{
                 padding: 40px 0px;
             }

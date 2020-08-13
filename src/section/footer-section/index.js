@@ -17,10 +17,10 @@ class FooterSection extends Component{
                             <Link to="/about">ABOUT</Link>
                         </Col>
                         <Col className="footer-wrapper__logo" lg="12" md="12" sm="12" xs="12">
-                            <a href="mailto:devbyredcode@gmail.com">MAIL US!</a>
+                            <a href="mailto:devbyredcode@gmail.com">MAIL ME!</a>
                         </Col>
                         <Col className="footer-wrapper__content" lg="12" md="12" sm="12" xs="12">
-                            <p>copyright&copy; 2020 redcode creative team</p>
+                            <p>copyright&copy; 2020 ega javier harwenda</p>
                         </Col>
                     </Row>
                 </Container>

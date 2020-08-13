@@ -138,7 +138,7 @@ const NavbarPrimaryStyle = styled.div`
             text-align: left;
 
             img{
-                width: 40px;
+                width: auto;
                 height: 40px;
             }
         }

@@ -18,6 +18,10 @@ const NewsThreeColumnSectionStyle = styled.div`
             margin-bottom: 50px;
         }
 
+        .news-wrapper{
+            min-height: 400px;
+        }
+
         .mt-4{
             @media only screen and (max-width: 768px) {
                 margin-top: 0px !important;

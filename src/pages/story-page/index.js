@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HeaderPrimary from '../../components/header-primary';
 import NewsCardPrimary from '../../components/news-card-primary';
 import FooterSection from '../../section/footer-section';
-import LoadingPrimary from '../../components/loading-primary';
+import Skeleton from 'react-loading-skeleton';
 import NoDataPrimary from '../../components/no-data-primary';
 import StoryPageStyle from './index.style';
 import { Container, Row, Col } from 'reactstrap';
@@ -56,7 +56,7 @@ class StoryPage extends Component{
                 <Container className="filter-primary-wrapper">
                     <div className="filter-primary-wrapper__item">
                         {this.state.itemFilter.map((item, index) => {
-                            return <span className={this.state.isActive == item.category ? 'active' : ""}  
+                            return <span className={this.state.isActive === item.category ? 'active' : ""}  
                                         onClick={this.getDataWithCategory.bind(this, item.category)} 
                                         key={index}>{item.label}</span>
                         })}
@@ -64,7 +64,7 @@ class StoryPage extends Component{
                 </Container>
                 { 
                     this.state.isLoading ? 
-                    <LoadingPrimary/> :
+                    <Skeleton width={window.innerWidth > 768 ? 330 : 300} height={400} count={3} style={{margin: "0px 20px 20px"}}/> :
                     <Container>
                         <Row className="news-wrapper">
                             {

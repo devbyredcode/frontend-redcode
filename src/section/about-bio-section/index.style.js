@@ -11,6 +11,15 @@ const AboutBioSectionStyle = styled.div`
     .container{
         padding-left: 150px;
         padding-right: 150px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    img{
+        height: 164px;
+        width: 164px;
+        border-radius: 90px;
+        margin-bottom: 20px;
     }
 
     h2{

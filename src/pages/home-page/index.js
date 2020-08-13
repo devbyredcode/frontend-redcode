@@ -10,9 +10,6 @@ class HomePage extends Component{
     constructor(props){
         super(props);
         this.state = {
-            sliderData : {
-                itemData : []
-            },
             newsData : {
                 itemData : []
             },
@@ -30,12 +27,10 @@ class HomePage extends Component{
 
         axios.get('/api/v1/landing-page')
             .then(response => {
-                const posts = response.data.data.data_case_study.slice(0, 3);
                 const story = response.data.data.data_story;
                 const playground = response.data.data.data_playground;
 
                 this.setState({ 
-                    sliderData : {...this.state.sliderData, itemData : posts},
                     newsData : {...this.state.newsData, itemData : story, isLoading: false},
                     playGroundData: {...this.state.playGroundData, itemData : playground, isLoading: false}
                 });
@@ -58,34 +53,12 @@ class HomePage extends Component{
             <div>
                 <HeroSection/>
                 <ServiceSection/>
-                {
-                    this.state.sliderData.itemData.length > 0 ?
-                    <SliderSection
-                        url = "case-study"
-                        itemData = {this.state.sliderData.itemData}/>
-                : ""
-                }
-                {
-                    this.state.newsData.itemData.length > 0 ?
-                    <NewsThreeColumnSection
-                        title="WE ALSO WRITE SOME"
-                        highlighted="STORIES"
-                        btnLabel="READ OTHERS"
-                        itemData={this.state.newsData.itemData}
-                        url="story"/>    
-                    : ""
-                }
-                {
-                    this.state.playGroundData.itemData.length > 0 ?
-                    <NewsThreeColumnSection
-                        title="WE ALSO DO"
-                        highlighted="EXPERIMENT"
-                        btnLabel="SEE OTHERS"
-                        type="url"
-                        itemData={this.state.playGroundData.itemData}
-                        url="playground"/>
-                    : ""
-                }
+                <SliderSection/>
+                <NewsThreeColumnSection
+                    title="I ALSO WRITE SOME"
+                    highlighted="STORIES"
+                    btnLabel="READ OTHERS"
+                    url="story"/>
                 <FooterSection/>
             </div>
         )

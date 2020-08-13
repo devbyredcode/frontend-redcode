@@ -23,6 +23,8 @@ const HeroSectionStyle = styled.section`
                 font-size: 6.5vw;
                 color: #FFF;
                 letter-spacing: 2px;
+                width: 80%;
+                margin: auto;
 
                 @media only screen and (max-width: 768px) {
                     font-size: 12.5vw;
