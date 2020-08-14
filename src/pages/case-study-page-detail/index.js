@@ -37,10 +37,17 @@ class CaseStudyPageDetail extends Component {
                                     BACK
                                 </Link>
                             </div>
-                            <img src={`https://res.cloudinary.com/devbyredcode/image/upload/${this.state.itemData.image}`} className="img-fluid" draggable="false" alt={this.state.itemData.title}/>
+                            {
+                                this.state.isLoading ? 
+                                    <picture>
+                                        <source srcSet="/image/background/blur-placeholder.webp" type="image/webp"/>
+                                        <img src="/image/background/blur-placeholder.png" alt="" className=""/>
+                                    </picture>
+                                    : <img src={`https://res.cloudinary.com/devbyredcode/image/upload/${this.state.itemData.image}`} className="img-fluid" draggable="false" alt={this.state.itemData.title}/>
+                            }
                             <div className="case-study-page__title__content">
                                 <span>{this.state.itemData.category}</span>
-                                <h1>{this.state.itemData.title || <Skeleton/>}</h1>
+                                <h1>{this.state.itemData.title}</h1>
                                 <div className="devider red"></div>
                                 <span>{this.state.itemData.client}</span>
                             </div>
@@ -48,19 +55,27 @@ class CaseStudyPageDetail extends Component {
                         <div className="container case-study-page__description">
                             <div className="case-study-page__description__detail">
                                 <h2>CLIENT PROBLEM</h2>
-                                <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.client_problem}}/>
+                                {
+                                    this.state.isLoading ? <Skeleton width={900} height={10} style={{margin: "10px"}}/> : <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.client_problem}}/>
+                                }
                             </div>
                             <div className="case-study-page__description__detail">
                                 <h2>CLIENT BRIEF</h2>
-                                <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.client_brief}}/>
+                                {
+                                    this.state.isLoading ? <Skeleton width={900} height={10}/> : <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.client_brief}}/>
+                                }
                             </div>
                             <div className="case-study-page__description__detail">
                                 <h2>OUR SOLUTION</h2>
-                                <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.our_solution}}/>
+                                {
+                                    this.state.isLoading ? <Skeleton width={900} height={10}/> : <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.our_solution}}/>
+                                }
                             </div>
                             <div className="case-study-page__description__detail">
                                 <h2>OUR RESULT</h2>
-                                <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.our_result}}/>
+                                {
+                                    this.state.isLoading ? <Skeleton width={900} height={10}/> : <p className="case-study-page__client-problem" dangerouslySetInnerHTML={{__html: this.state.itemData.our_result}}/>
+                                }
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ const CaseStudyPageDetailStyle = styled.div`
     .case-study-page{
         &__title{
             position: relative;
+            min-height: 100vh;
 
             img{
                 width: 100%;
