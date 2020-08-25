@@ -33,7 +33,7 @@ class AboutHeroSection extends Component{
                                 label="SEE HISTORY"/>
                         </div>
                         <div className="hero-section__download">
-                            <a href="mailto:egaharwenda@gmail.com">HIRE ME</a><span> / </span><a className="">DOWNLOAD MY RESUME</a>
+                            <a href="mailto:egaharwenda@gmail.com">HIRE ME</a><span> / </span><a href="/files/EGA_JAVIER_HARWENDA_CV.pdf" target="_blank" className="">DOWNLOAD MY RESUME</a>
                         </div>
                     </Row>
                 </Container>

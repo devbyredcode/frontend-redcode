@@ -89,11 +89,11 @@ class StoryPageDetail extends Component{
                             this.state.isLoading ? "" : 
                             <div className="container story-page__share">
                                 <p>Kalau temen-temen merasa tulisan ini bermanfaat? silahkan bagikan melalui social media agar dapat bermanfaat untuk temen-temen lainya:</p> 
-                                <EmailShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut ${window.location.href} dan semoga bermanfaat`}><EmailIcon size={32}/></EmailShareButton>
-                                <TelegramShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><TelegramIcon size={32}/></TelegramShareButton>
-                                <WhatsappShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><WhatsappIcon size={32}/></WhatsappShareButton>
-                                <TwitterShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><TwitterIcon size={32}/></TwitterShareButton>
-                                <WorkplaceShareButton url={`Ayo baca artikel berikut, yang berjudul ${this.textToCapitalize(this.state.itemData.title)} dengan klik link berikut : ${window.location.href} dan semoga bermanfaat`}><WorkplaceIcon size={32}/></WorkplaceShareButton>
+                                <EmailShareButton url={`Baca Artikel - ${this.state.itemData.title} : ${window.location.href}`}><EmailIcon size={32}/></EmailShareButton>
+                                <TelegramShareButton url={`Baca Artikel - ${this.state.itemData.title} : ${window.location.href}`}><TelegramIcon size={32}/></TelegramShareButton>
+                                <WhatsappShareButton url={`Baca Artikel - ${this.state.itemData.title} : ${window.location.href}`}><WhatsappIcon size={32}/></WhatsappShareButton>
+                                <TwitterShareButton url={`Baca Artikel - ${this.state.itemData.title} : ${window.location.href}`}><TwitterIcon size={32}/></TwitterShareButton>
+                                <WorkplaceShareButton url={`Baca Artikel - ${this.state.itemData.title} : ${window.location.href}`}><WorkplaceIcon size={32}/></WorkplaceShareButton>
                             </div>
                         }
                     </div>
