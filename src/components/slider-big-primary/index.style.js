@@ -91,7 +91,7 @@ const SliderBigPrimaryStyle = styled.div`
 
     
     @media only screen and (max-width: 768px) {
-        height: calc(85vh + 7vw);
+        height: calc(55vh + 7vw);
     }
 `
 

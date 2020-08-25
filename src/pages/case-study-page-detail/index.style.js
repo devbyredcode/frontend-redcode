@@ -87,6 +87,10 @@ const CaseStudyPageDetailStyle = styled.div`
                     }
                 }
             }
+
+            @media (max-width: 768px){
+                min-height: auto;
+            }
         }
 
         &__description{
@@ -132,7 +136,7 @@ const CaseStudyPageDetailStyle = styled.div`
             }
 
             @media (max-width: 768px){
-                padding: 50px 20px 0px;
+                padding: 50px 0px 0px !important;
                 width: 90%;
             }
         }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, HashRouter  } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 import NavbarPrimary from './components/navbar-primary';
 import HomePage from './pages/home-page';
@@ -12,7 +12,7 @@ import CaseStudyPageDetail from './pages/case-study-page-detail';
 
 function App() {  
   return (
-    <HashRouter hashType="slash">
+    <BrowserRouter basename='/'>
       <div className="App">
         <NavbarPrimary/>
         <Switch>
@@ -25,7 +25,7 @@ function App() {
           <Route path="/about" component={AboutPage}/>
         </Switch>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

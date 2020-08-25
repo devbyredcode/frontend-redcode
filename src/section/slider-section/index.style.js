@@ -19,6 +19,10 @@ const SliderSectionStyle = styled.section`
 
             &__item{
                 min-height: 500px;
+
+                @media only screen and (max-width: 768px) {
+                    min-height: calc(55vh + 7vw);
+                }
             }
 
             &__action{

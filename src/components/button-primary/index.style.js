@@ -83,7 +83,7 @@ const ButtonPrimaryStyle = styled.button`
         @media only screen and (max-width: 768px){
             padding: 18px 24px;
             margin: 0px;
-            transform: scale(0.9);
+            transform: scale(0.7);
         }
 
         &:focus{

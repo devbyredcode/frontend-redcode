@@ -10,7 +10,7 @@ class SliderBigPrimary extends Component{
         <SliderBigPrimaryStyle>
             <div className="overlay">
                 <div className="overlay__text">
-                    <h3 className="text--step-up-2">{this.props.title}</h3>
+                    <h3 className="text--step-down-1">{this.props.title}</h3>
                     <p className="text--step-down-5">{this.props.detail}</p>
                     <Link to={`/case-study/${this.props.slug}`}>
                     <ButtonPrimary 
